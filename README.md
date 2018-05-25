@@ -1,4 +1,4 @@
-# Reminder-app
+# Reminder
 *Application made via Python and Kivy framework*
 
 Hello and welcome to my Reminder application which is created via Python and Kivy framework.
