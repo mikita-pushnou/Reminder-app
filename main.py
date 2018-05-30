@@ -13,7 +13,7 @@ Config.set("graphics", "height", 500)
 
 class myLayout(BoxLayout):
     def __init__(self, **kwargs):
-        super(myLayout, self).__init__(**kwargs)
+        super().__init__(**kwargs)
 
         layout = BoxLayout(orientation="vertical",
                            padding=20,
