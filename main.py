@@ -36,12 +36,12 @@ class myLayout(BoxLayout):
                       size_hint=(None, None),
                       size=(350, 200))
 
-        return popup.open()
+        popup.open()
 
     def timer(self, obj):
         timer = Timer(time_var, self.popup)
 
-        return timer.start()
+        timer.start()
 
 
 class ReminderApp(App):
