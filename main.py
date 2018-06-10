@@ -36,20 +36,36 @@ class Reminder(BoxLayout):
         button_2.bind(on_press=self.timer_2)
 
     def popup(self):
+        box = BoxLayout(orientation="vertical")
+        lbl = Label(text=remind_text)
+        close_button = Button(text='Close')
+        box.add_widget(lbl)
+        box.add_widget(close_button)
 
-        popup = Popup(title="Remind you to",
-                      content=Label(text=remind_text),
+        popup = Popup(title="Remind you to", separator_height=3, title_size=30,
+                      content=box,
                       size_hint=(None, None),
-                      size=(350, 200))
+                      size=(550, 300),
+                      auto_dismiss=False)
+
+        close_button.bind(on_press=popup.dismiss)
 
         popup.open()
 
     def popup_2(self):
+        box = BoxLayout(orientation="vertical")
+        lbl = Label(text=remind_text_2)
+        close_button = Button(text='Close')
+        box.add_widget(lbl)
+        box.add_widget(close_button)
 
-        popup_2 = Popup(title="Remind you to",
-                        content=Label(text=remind_text_2),
+        popup_2 = Popup(title="Remind you to", separator_height=3, title_size=30,
+                        content=box,
                         size_hint=(None, None),
-                        size=(350, 200))
+                        size=(550, 300),
+                        auto_dismiss=False)
+
+        close_button.bind(on_press=popup_2.dismiss)
 
         popup_2.open()
 
